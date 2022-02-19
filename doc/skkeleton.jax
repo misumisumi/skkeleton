@@ -172,6 +172,11 @@ registerConvertResult                 *skkeleton-config-registerConvertResult*
         カタカナ変換等の結果を辞書に登録するようになります。
         補完機能を使っている場合などに便利だと思います。
 
+kanaTable                                         *skkeleton-config-kanaTable*
+        (デフォルト "rom")
+        使用する仮名テーブルを指定します。
+        仮名テーブルは |skkeleton#register_kanatable()| で登録できます。
+
 keepState                                         *skkeleton-config-keepState*
         (デフォルト v:false)
         このオプションを有効にすると
