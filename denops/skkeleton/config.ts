@@ -13,6 +13,7 @@ export const config = {
   globalJisyoEncoding: "euc-jp",
   immediatelyCancel: true,
   immediatelyJisyoRW: true,
+  kanaTable: "rom",
   keepState: false,
   registerConvertResult: false,
   selectCandidateKeys: "asdfjkl",
@@ -49,6 +50,7 @@ const validators: Validators = {
       throw TypeError("selectCandidateKeys.length !== 7");
     }
   },
+  kanaTable: ensureString,
   keepState: ensureBoolean,
   setUndoPoint: ensureBoolean,
   showCandidatesCount: ensureNumber,
