@@ -92,7 +92,7 @@ KEYMAPPINGS                                            *skkeleton-keymappings*
     cmap <C-j> <Plug>(skkeleton-enable)
 <
 
-<Plug>(skkeleton-disable) (ic)                       *<Plug>(skkeleton-disable)*
+<Plug>(skkeleton-disable) (ic)                     *<Plug>(skkeleton-disable)*
 
         skkeletonを無効化します。  >
 
@@ -258,19 +258,19 @@ showCandidatesCount                     *skkeleton-config-showCandidatesCount*
         (デフォルト 4)
         このオプションの数の候補までは選択表示がされずに変換されます。
 
-skkServerHost                   *skkeleton-config-skkServerHost*
+skkServerHost                                 *skkeleton-config-skkServerHost*
         (デフォルト "127.0.0.1")
         辞書サーバーのホスト名またはIPアドレスを指定します。
 
-skkServerPort                   *skkeleton-config-skkServerPort*
+skkServerPort                                 *skkeleton-config-skkServerPort*
         (デフォルト 1178)
         辞書サーバーのポート番号を指定します。
 
-skkServerReqEnc                 *skkeleton-config-skkServerReqEnc*
+skkServerReqEnc                             *skkeleton-config-skkServerReqEnc*
         （デフォルト "euc-jp"）
         辞書サーバーに渡す文字列のエンコード形式を指定します。
 
-skkServerResEnc                 *skkeleton-config-skkServerResEnc*
+skkServerResEnc                             *skkeleton-config-skkServerResEnc*
         （デフォルト "euc-jp"）
         辞書サーバーから受け取る文字列のエンコード形式を指定します。
 
@@ -278,18 +278,18 @@ usePopup                                           *skkeleton-config-usePopup*
         (デフォルト v:true)
         このオプションを有効にすると、変換候補がポップアップ表示されます。
 
-useSkkServer                              *skkeleton-config-useSkkServer*
+useSkkServer                                   *skkeleton-config-useSkkServer*
         (デフォルト v:false)
         辞書サーバー機能を有効にします。
 
-userJisyo                                     *skkeleton-config-userJisyo*
+userJisyo                                         *skkeleton-config-userJisyo*
         (デフォルト "~/.skkeleton")
         ユーザー辞書のパス
         JavaScriptの制約によりエンコーディングはUTF-8限定になります。
 
 ------------------------------------------------------------------------------
                                               *skkeleton#register_kanatable()*
-skkeleton#register_kanatable({tableName}, {table}, {create})
+skkeleton#register_kanatable({tableName}, {table} [, {create}])
         仮名入力のテーブルを登録できます。
         {tableName}で指定したテーブルに{table}で指定した辞書の定義が登録されま
         す。{create}が指定されていない場合は存在しないテーブル名を指定すると
@@ -415,10 +415,17 @@ sticky keyの挙動をeskk.vimに合わせる~
 ==============================================================================
 CHANGELOG                                                *skkeleton-changelog*
 
+2022-12-18~
+- Lua APIからautoload変数を操作した際におかしくなっていた(thanks @uga-rosa)
+
+* 調べて埋める *
+
 2022-04-25~
 - 補完ハンドリングの修正
   - キーを奪うのをやめた
 - tabCompletionオプションの削除
+
+* 調べて埋める *
 
 2022-03-27~
 - |skkeleton#register_kanatable()|の一部要素を省略可能にした
@@ -426,10 +433,17 @@ CHANGELOG                                                *skkeleton-changelog*
 2022-03-24~
 - abbrevモードを追加
 
+2022-03-23~
+- abbrevモードを追加
+
+* 調べて埋める *
+
 2022-02-28~
 - カタカナ変換などの際に送り仮名がひらがなになっていたので修正
 
 2022-02-27~
 - |skkeleton-config-completionRankFile|オプションの追加
+
+* 調べて埋める *
 
 vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
