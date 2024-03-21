@@ -20,7 +20,7 @@ function skkeleton#internal#map#restore() abort
   for [mode, maps] in items(buf)
     execute mode .. 'mapclear <buffer>'
     for m in maps
-      call mapset(m)
+      call mapset(mode, 0, m)
     endfor
   endfor
   silent! unlet s:vault[bufnr]
